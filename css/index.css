@@ -1,0 +1,84 @@
+body {
+  background-color: #fefbd8;
+  color: #201e43;
+  font-family: "Hanuman", serif;
+}
+
+section {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fffff0;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+#about {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #5c4ab1;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #6870cb;
+  text-align: center;
+}
+
+#photo {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 230px;
+  height: 280px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 8px double #fffff0;
+  box-shadow: 0 4px 8px rgba(151, 214, 107, 0.3);
+}
+
+#experience ul {
+  list-style: none;
+  padding: 0;
+}
+
+#experience li {
+  background-color: #fff8f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#experience li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#connect ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#connect li {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #f0f0ff;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
