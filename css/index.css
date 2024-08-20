@@ -50,7 +50,7 @@ img {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   gap: 20px;
   /* align-items: center; */
 }
@@ -87,13 +87,13 @@ img {
   font-weight: bold;
 }
 
-#connect li a{
+#connect li a {
   text-decoration: none;
 }
 
 header {
   background-color: #d8dbfe;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   position: sticky;
   top: 0;
 }
@@ -116,6 +116,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #002c86;
-    background-color:#feeff1;
+  color: #002c86;
+  background-color: #feeff1;
 }
