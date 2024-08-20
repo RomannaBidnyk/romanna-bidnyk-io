@@ -49,6 +49,10 @@ img {
 #experience ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px;
+  /* align-items: center; */
 }
 
 #experience li {
@@ -69,11 +73,11 @@ img {
 #connect ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 #connect li {
-  display: inline-block;
   margin: 10px 0;
   padding: 10px 20px;
   background-color: #f0f0ff;
@@ -81,4 +85,37 @@ img {
   text-align: center;
   border-radius: 8px;
   font-weight: bold;
+}
+
+#connect li a{
+  text-decoration: none;
+}
+
+header {
+  background-color: #d8dbfe;
+  padding: 10px 20px; 
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+nav ul li a {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #002c86;
+    background-color:#feeff1;
 }
