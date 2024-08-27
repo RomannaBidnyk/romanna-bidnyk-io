@@ -1,3 +1,4 @@
+/* Desktop */
 body {
   background-color: #fefbd8;
   color: #201e43;
@@ -118,4 +119,93 @@ nav ul li a {
 nav ul li a:hover {
   color: #002c86;
   background-color: #feeff1;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  body {
+    background-color: #fdf6c3;
+  }
+
+  section {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 1px;
+  }
+
+  img {
+    width: 200px;
+    height: 240px;
+    margin-bottom: 8px;
+    border: 6px double #fffff0;
+  }
+
+  #experience ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #connect ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  body {
+    background-color: #fbf3a3;
+    font-size: 0.875rem;
+  }
+
+  section {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.75em;
+    letter-spacing: 0.5px;
+  }
+
+  img {
+    width: 150px;
+    height: 180px;
+    border: 4px double #fffff0;
+    margin-bottom: 5px;
+  }
+
+  #experience ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #experience li {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  #connect ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #connect li {
+    padding: 8px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul li a {
+    padding: 1px 5px;
+  }
 }
