@@ -139,6 +139,73 @@ nav ul li a:hover {
   background-color: #feeff1;
 }
 
+#leave-message form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#leave-message input,
+#leave-message textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#leave-message button {
+  background-color: #5c4ab1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#leave-message button:hover {
+  background-color: #4a3b8f;
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#messages li {
+  background-color: #fff8f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#messages li a {
+  color: #5c4ab1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#messages li a:hover {
+  text-decoration: underline;
+}
+
+#messages li button {
+  color: #5c4ab1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  right: 10px;
+  top: 10px;
+}
+
 /* Tablet */
 
 @media (max-width: 1024px) and (min-width: 600px) {
