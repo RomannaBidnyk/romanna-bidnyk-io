@@ -40,7 +40,7 @@ for (let i = 0; i < skills.length; i++) {
 // Messages
 
 let messageForm = document.querySelector('form[name="leave_message"]');
-document.querySelector("#messages").style.display = "none";
+document.querySelector("#messages").hidden = true;
 
 messageForm.addEventListener("submit", (event) =>
   handleSubmittedMessage(event)
@@ -98,8 +98,8 @@ function handleSubmittedMessage(event) {
 
 function changeMessagesSectionVisibility(messageSection, messageList) {
   if (messageList.children.length === 0) {
-    messageSection.style.display = "none";
+    messageSection.hidden = true;
   } else {
-    messageSection.style.display = "block";
+    messageSection.hidden = false;
   }
 }
