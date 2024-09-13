@@ -36,3 +36,44 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+
+//Projects Section
+let repositories;
+
+fetch("https://api.github.com/users/RomannaBidnyk/repos")
+  .then((response) => response.json())
+  .then((data) => {
+    repositories = JSON.parse(JSON.stringify(data));
+    if (repositories.length === 0) {
+      console.log("No repositories found.");
+    } else {
+      console.log(repositories);
+      repositories.sort(
+        (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+      );
+      displayRepositories(repositories);
+    }
+  })
+  .catch((error) => {
+    console.error("There was a problem with the fetch operation:", error);
+  });
+
+function displayRepositories(repositories) {
+  const projectSection = document.querySelector("#projects");
+  const projectsList = projectSection.querySelector("ul");
+
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement("li");
+    let name = repositories[i].name;
+    if (name.startsWith("forage") || name.startsWith("reward")) continue;
+    project.innerText = repositories[i].name;
+
+    const link = document.createElement("a");
+    link.href = repositories[i].html_url;
+    link.innerText = "GitHub";
+    link.target = "_blank";
+
+    project.appendChild(link);
+    projectsList.appendChild(project);
+  }
+}
