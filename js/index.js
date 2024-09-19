@@ -36,3 +36,70 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+
+// Messages
+
+let messageForm = document.querySelector('form[name="leave_message"]');
+document.querySelector("#messages").hidden = true;
+
+messageForm.addEventListener("submit", (event) =>
+  handleSubmittedMessage(event)
+);
+
+function handleSubmittedMessage(event) {
+  event.preventDefault();
+
+  let name = event.target.usersName.value;
+  let email = event.target.usersEmail.value;
+  let message = event.target.usersMessage.value;
+
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+
+  const messageSection = document.querySelector("#messages");
+  const messageList = messageSection.querySelector("ul");
+  const newMessage = document.createElement("li");
+
+  const emailAndNamePart = `<a href="mailto:${email}" target="_blank">${name}</a>`;
+  newMessage.innerHTML = `${emailAndNamePart}: <span>${message}</span>`;
+
+  //remove
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+
+  removeButton.addEventListener("click", (event) => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+    changeMessagesSectionVisibility(messageSection, messageList);
+  });
+
+  //edit
+  const editButton = document.createElement("button");
+  editButton.innerText = "edit";
+  editButton.type = "button";
+
+  editButton.addEventListener("click", (event) => {
+    const listItem = editButton.parentNode;
+    const span = listItem.querySelector("span");
+    const changedMessage = prompt("Edit your message:", span.textContent);
+
+    span.textContent = changedMessage;
+  });
+
+  newMessage.appendChild(removeButton);
+  newMessage.appendChild(editButton);
+  messageList.appendChild(newMessage);
+  changeMessagesSectionVisibility(messageSection, messageList);
+
+  messageForm.reset();
+}
+
+function changeMessagesSectionVisibility(messageSection, messageList) {
+  if (messageList.children.length === 0) {
+    messageSection.hidden = true;
+  } else {
+    messageSection.hidden = false;
+  }
+}
