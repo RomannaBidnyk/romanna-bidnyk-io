@@ -206,6 +206,25 @@ nav ul li a:hover {
   top: 10px;
 }
 
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#projects li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #fbf3e7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#projects li a {
+  text-decoration: none;
+  float: right;
+}
+
 /* Tablet */
 
 @media (max-width: 1024px) and (min-width: 600px) {
