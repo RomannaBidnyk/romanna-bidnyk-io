@@ -5,6 +5,14 @@ body {
   font-family: "Hanuman", serif;
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 section {
   padding: 20px;
   margin: 20px 0;
@@ -302,6 +310,18 @@ nav ul li a:hover {
 
   #connect li {
     padding: 8px 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.active {
+    display: flex;
   }
 
   nav ul {
