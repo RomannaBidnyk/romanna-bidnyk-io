@@ -1,4 +1,4 @@
-//Add humburger menu activation
+//Hamburger menu activation
 const hamburger = document.querySelector(".hamburger");
 const navList = document.querySelector(".nav-list");
 
