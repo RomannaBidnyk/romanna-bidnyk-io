@@ -5,6 +5,14 @@ body {
   font-family: "Hanuman", serif;
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 section {
   padding: 20px;
   margin: 20px 0;
@@ -204,6 +212,7 @@ nav ul li a:hover {
   font-size: 0.9em;
   right: 10px;
   top: 10px;
+  margin-left: 10px;
 }
 
 #projects ul {
@@ -222,7 +231,16 @@ nav ul li a:hover {
 
 #projects li a {
   text-decoration: none;
-  float: right;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #201e43;
+}
+
+#projects li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Tablet */
@@ -302,6 +320,18 @@ nav ul li a:hover {
 
   #connect li {
     padding: 8px 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.active {
+    display: flex;
   }
 
   nav ul {

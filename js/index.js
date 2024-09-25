@@ -1,3 +1,11 @@
+//Hamburger menu activation
+const hamburger = document.querySelector(".hamburger");
+const navList = document.querySelector(".nav-list");
+
+hamburger.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
+
 // Add Footer
 const footer = document.createElement("footer");
 
@@ -133,12 +141,19 @@ function displayRepositories(repositories) {
     const project = document.createElement("li");
     let name = repositories[i].name;
     if (name.startsWith("forage") || name.startsWith("reward")) continue;
-    project.innerText = repositories[i].name;
 
     const link = document.createElement("a");
     link.href = repositories[i].html_url;
-    link.innerText = "GitHub";
     link.target = "_blank";
+
+    const repoName = document.createElement("span");
+    repoName.innerText = repositories[i].name;
+
+    const githubText = document.createElement("span");
+    githubText.innerText = "GitHub";
+
+    link.appendChild(repoName);
+    link.appendChild(githubText);
 
     project.appendChild(link);
     projectsList.appendChild(project);
